@@ -3,7 +3,7 @@ const _ = require('underscore');
 
 const setName = (name) => _.escape(name).trim();
 
-const DomoSchema = new mongoose.SchemaType({
+const DomoSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -16,7 +16,7 @@ const DomoSchema = new mongoose.SchemaType({
         required: true,
     },
     owner: {
-        type: mongoose.SchemaType.ObjectId,
+        type: mongoose.Schema.ObjectId,
         required: true,
         ref: 'Account',
     },
